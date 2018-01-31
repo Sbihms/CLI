@@ -1,0 +1,17 @@
+Makes an empty file
+
+Sarahs-MacBook-Air:temp sarah$ touch iamcool.txt
+Sarahs-MacBook-Air:temp sarah$ ls
+iamcool.txt
+
+
+Make new directory, change to it, create empty file, move, try to delete directory.
+
+Sarahs-MacBook-Air:temp sarah$ mkdir nials
+Sarahs-MacBook-Air:temp sarah$ cd nials
+Sarahs-MacBook-Air:nials sarah$ touch gold.txt
+Sarahs-MacBook-Air:nials sarah$ cd ..
+Sarahs-MacBook-Air:temp sarah$ rmdir nials
+rmdir: nials: Directory not empty
+
+
