@@ -1,0 +1,43 @@
+Mkdir command lets you make a new folder or directory.
+
+Sarahs-MacBook-Air:~ sarah$ mkdir temp
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/stuff
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/stuff/things
+Sarahs-MacBook-Air:~ sarah$ mkdir -p temp/stuff/things/sarah/emma/joe/cass
+Sarahs-MacBook-Air:~ sarah$ pwd
+/Users/sarah
+Sarahs-MacBook-Air:~ sarah$ cd ~
+Sarahs-MacBook-Air:~ sarah$ mkdir temp
+mkdir: temp: File exists
+
+My attempt at making about 20 more files. There were some errors. I tried to create more than one file in the same string but it said that path did not exist. I discovered I need to use -p in order to create more than 1 file in a string.
+
+Mkdir -p : will also create all directories leading up to the given directory that does not already exist.
+
+
+Sarahs-MacBook-Air:~ sarah$ mkdir "Sarah Stuff"
+Sarahs-MacBook-Air:~ sarah$ mkdir/"Sarah Stuff"/food
+-bash: mkdir/Sarah Stuff/food: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/"Sarah Stuff"/baby
+mkdir: temp/Sarah Stuff: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/SarahStuff/baby
+mkdir: temp/SarahStuff: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir "Sarah Stuff"/Joe
+Sarahs-MacBook-Air:~ sarah$ mkdir "Sarah Stuff"/Joe/Sarah/Cass/monkey
+mkdir: Sarah Stuff/Joe/Sarah/Cass: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir "Sarah Stuff"/Joe/Sarah
+Sarahs-MacBook-Air:~ sarah$ mkdir /Sarah/Bean
+mkdir: /Sarah: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir "Sarah Stuff"/Sarah
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/booger/fling/car/bird
+mkdir: temp/booger/fling/car: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/booger/fling
+mkdir: temp/booger: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/booger
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/booger/fling
+Sarahs-MacBook-Air:~ sarah$ mkdir temp/booger/fling/star/cat
+mkdir: temp/booger/fling/star: No such file or directory
+Sarahs-MacBook-Air:~ sarah$ mkdir -p "Sarah Stuff"/butt/head/star/fish/happy/place
+
+
+
