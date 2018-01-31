@@ -1,0 +1,91 @@
+Rmdir removes an empty directory. I encountered an error when trying to delete "Joe" - it said the directory was not empty. With Joe's help I typed in "ls -la" to see the contents of the folder and discovered a hidden file was in the folder: .DS_store
+
+Typed rm .DS_store to delete the file. It worked.
+
+Sarahs-MacBook-Air:~ sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ ls
+booger stuff
+Sarahs-MacBook-Air:temp sarah$ cd stuff/things
+Sarahs-MacBook-Air:things sarah$ ls
+sarah
+Sarahs-MacBook-Air:things sarah$ cd sarah/joe
+-bash: cd: sarah/joe: No such file or directory
+Sarahs-MacBook-Air:things sarah$ cd sarah
+Sarahs-MacBook-Air:sarah sarah$ ls
+emma
+Sarahs-MacBook-Air:sarah sarah$ cd emma/joe
+Sarahs-MacBook-Air:joe sarah$ ls
+cass
+Sarahs-MacBook-Air:joe sarah$ cd ..
+Sarahs-MacBook-Air:emma sarah$ rmdir cass
+rmdir: cass: No such file or directory
+Sarahs-MacBook-Air:emma sarah$ ls
+joe
+Sarahs-MacBook-Air:emma sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah/emma
+Sarahs-MacBook-Air:emma sarah$ cd cass
+-bash: cd: cass: No such file or directory
+Sarahs-MacBook-Air:emma sarah$ cd jow
+-bash: cd: jow: No such file or directory
+Sarahs-MacBook-Air:emma sarah$ cd joe
+Sarahs-MacBook-Air:joe sarah$ ls
+cass
+Sarahs-MacBook-Air:joe sarah$ cd cass
+Sarahs-MacBook-Air:cass sarah$ ls
+Sarahs-MacBook-Air:cass sarah$ cd ..
+Sarahs-MacBook-Air:joe sarah$ rmdir cass
+Sarahs-MacBook-Air:joe sarah$ cd ..
+Sarahs-MacBook-Air:emma sarah$ rmdir joe
+rmdir: joe: Directory not empty
+Sarahs-MacBook-Air:emma sarah$ ls
+joe
+Sarahs-MacBook-Air:emma sarah$ cd joe
+Sarahs-MacBook-Air:joe sarah$ ls
+Sarahs-MacBook-Air:joe sarah$ cd ..
+Sarahs-MacBook-Air:emma sarah$ rmdir joe
+rmdir: joe: Directory not empty
+Sarahs-MacBook-Air:emma sarah$ cd ..
+Sarahs-MacBook-Air:sarah sarah$ rmdir joe
+rmdir: joe: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ cd emma
+Sarahs-MacBook-Air:emma sarah$ ls
+joe
+Sarahs-MacBook-Air:emma sarah$ rmdir joe
+rmdir: joe: Directory not empty
+Sarahs-MacBook-Air:emma sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah/emma
+Sarahs-MacBook-Air:emma sarah$ rmdir joe
+rmdir: joe: Directory not empty
+Sarahs-MacBook-Air:emma sarah$ cd joe
+Sarahs-MacBook-Air:joe sarah$ ls
+Sarahs-MacBook-Air:joe sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah/emma/joe
+Sarahs-MacBook-Air:joe sarah$ cd ..
+Sarahs-MacBook-Air:emma sarah$ rmdir joe
+rmdir: joe: Directory not empty
+Sarahs-MacBook-Air:emma sarah$ 
+
+Working through the problem of deleting the hidden file.
+
+Sarahs-MacBook-Air:emma sarah$ ls -la
+total 16
+drwxr-xr-x  4 sarah  staff   128 Jan 28 18:36 .
+drwxr-xr-x  4 sarah  staff   128 Jan 28 18:36 ..
+-rw-r--r--@ 1 sarah  staff  6148 Jan 28 20:36 .DS_Store
+drwxr-xr-x  3 sarah  staff    96 Jan 28 20:34 joe
+Sarahs-MacBook-Air:emma sarah$ cd joe
+Sarahs-MacBook-Air:joe sarah$ ls -la
+total 16
+drwxr-xr-x  3 sarah  staff    96 Jan 28 20:34 .
+drwxr-xr-x  4 sarah  staff   128 Jan 28 18:36 ..
+-rw-r--r--@ 1 sarah  staff  6148 Jan 28 18:36 .DS_Store
+Sarahs-MacBook-Air:joe sarah$ rm .DS_Store 
+Sarahs-MacBook-Air:joe sarah$ ls -la
+total 0
+drwxr-xr-x  2 sarah  staff   64 Jan 28 20:46 .
+drwxr-xr-x  4 sarah  staff  128 Jan 28 18:36 ..
+Sarahs-MacBook-Air:joe sarah$ cd ..
+Sarahs-MacBook-Air:emma sarah$ rmdir joe
+Sarahs-MacBook-Air:emma sarah$ 
+
+
