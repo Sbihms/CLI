@@ -1,0 +1,90 @@
+Pushd command takes your current directory and "pushes" it into a list for later and then changes to another directory. Popd takes the last directory you pushed and "pops" it off.
+
+
+Sarahs-MacBook-Air:~ sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ mkdir -p i/like/icecream
+Sarahs-MacBook-Air:temp sarah$ popd
+-bash: popd: directory stack empty
+Sarahs-MacBook-Air:temp sarah$ pwd
+/Users/sarah/temp
+Sarahs-MacBook-Air:temp sarah$ pushd i/like
+~/temp/i/like ~/temp
+Sarahs-MacBook-Air:like sarah$ pwd
+/Users/sarah/temp/i/like
+Sarahs-MacBook-Air:like sarah$ pushd icecream
+~/temp/i/like/icecream ~/temp/i/like ~/temp
+Sarahs-MacBook-Air:icecream sarah$ pwd
+/Users/sarah/temp/i/like/icecream
+Sarahs-MacBook-Air:icecream sarah$ popd
+~/temp/i/like ~/temp
+Sarahs-MacBook-Air:like sarah$ pwd
+/Users/sarah/temp/i/like
+Sarahs-MacBook-Air:like sarah$ popd
+~/temp
+Sarahs-MacBook-Air:temp sarah$ pushd i/like/icecream
+~/temp/i/like/icecream ~/temp
+Sarahs-MacBook-Air:icecream sarah$ pushd
+~/temp ~/temp/i/like/icecream
+Sarahs-MacBook-Air:temp sarah$ pwd
+/Users/sarah/temp
+Sarahs-MacBook-Air:temp sarah$ pushd
+~/temp/i/like/icecream ~/temp
+Sarahs-MacBook-Air:icecream sarah$ pwd
+/Users/sarah/temp/i/like/icecream
+Sarahs-MacBook-Air:icecream sarah$ pushd
+~/temp ~/temp/i/like/icecream
+Sarahs-MacBook-Air:temp sarah$ pwd
+/Users/sarah/temp
+Sarahs-MacBook-Air:temp sarah$ 
+
+
+
+Practice using pushd and popd using directories I created:
+
+Sarahs-MacBook-Air:~ sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ mkdir dir1/dir2/dir3/dir4/dir5
+mkdir: dir1/dir2/dir3/dir4: No such file or directory
+Sarahs-MacBook-Air:temp sarah$ mkdir -p dir1/dir2/dir3/dir4/dir5
+Sarahs-MacBook-Air:temp sarah$ pushd dir1/dir2/dir3
+~/temp/dir1/dir2/dir3 ~/temp
+Sarahs-MacBook-Air:dir3 sarah$ pwd
+/Users/sarah/temp/dir1/dir2/dir3
+Sarahs-MacBook-Air:dir3 sarah$ popd
+~/temp
+Sarahs-MacBook-Air:temp sarah$ pushd
+-bash: pushd: no other directory
+Sarahs-MacBook-Air:temp sarah$ popd
+-bash: popd: directory stack empty
+Sarahs-MacBook-Air:temp sarah$ pushd dir/1/dir2/dir3/dir4/dir5
+-bash: pushd: dir/1/dir2/dir3/dir4/dir5: No such file or directory
+Sarahs-MacBook-Air:temp sarah$ pushd dir1/dir2
+~/temp/dir1/dir2 ~/temp
+Sarahs-MacBook-Air:dir2 sarah$ pushd dir1/dir2/dir3/dir4/dir5
+-bash: pushd: dir1/dir2/dir3/dir4/dir5: No such file or directory
+Sarahs-MacBook-Air:dir2 sarah$ pwd
+/Users/sarah/temp/dir1/dir2
+Sarahs-MacBook-Air:dir2 sarah$ pushd dir3/dir4/dir5
+~/temp/dir1/dir2/dir3/dir4/dir5 ~/temp/dir1/dir2 ~/temp
+Sarahs-MacBook-Air:dir5 sarah$ pwd
+/Users/sarah/temp/dir1/dir2/dir3/dir4/dir5
+Sarahs-MacBook-Air:dir5 sarah$ popd
+~/temp/dir1/dir2 ~/temp
+Sarahs-MacBook-Air:dir2 sarah$ popd
+~/temp
+Sarahs-MacBook-Air:temp sarah$ pushd
+-bash: pushd: no other directory
+Sarahs-MacBook-Air:temp sarah$ pushd dir1
+~/temp/dir1 ~/temp
+Sarahs-MacBook-Air:dir1 sarah$ pushd
+~/temp ~/temp/dir1
+Sarahs-MacBook-Air:temp sarah$ pushd
+~/temp/dir1 ~/temp
+Sarahs-MacBook-Air:dir1 sarah$ pwd
+/Users/sarah/temp/dir1
+Sarahs-MacBook-Air:dir1 sarah$ popd
+~/temp
+Sarahs-MacBook-Air:temp sarah$ popd
+-bash: popd: directory stack empty
+
+
+NOTE: PUSHD ADDS TO THE STACK, POPD REMOVES PATH FROM THE STACK
