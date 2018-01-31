@@ -1,0 +1,9 @@
+PWD - tells you where you are
+
+Sarahs-MacBook-Air:~ sarah$ pwd
+/Users/sarah
+
+If you get lost, type cd ~ to go back home. ALWAYS go home before starting new exercises.
+
+Sarahs-MacBook-Air:~ sarah$ cd ~
+Sarahs-MacBook-Air:~ sarah$ 
