@@ -1,0 +1,147 @@
+Making 20 directories
+
+Sarahs-MacBook-Air:~ sarah$ pwd
+/Users/sarah
+Sarahs-MacBook-Air:~ sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ mkdir 1
+Sarahs-MacBook-Air:temp sarah$ mkdir 2
+Sarahs-MacBook-Air:temp sarah$ mkdir 3
+Sarahs-MacBook-Air:temp sarah$ mkdir 4
+Sarahs-MacBook-Air:temp sarah$ pwd
+/Users/sarah/temp
+Sarahs-MacBook-Air:temp sarah$ mkdir 5
+Sarahs-MacBook-Air:temp sarah$ mkdir 6
+Sarahs-MacBook-Air:temp sarah$ mkdir 7
+Sarahs-MacBook-Air:temp sarah$ mkdir 8
+Sarahs-MacBook-Air:temp sarah$ mkdir 9
+Sarahs-MacBook-Air:temp sarah$ mkdir 10
+Sarahs-MacBook-Air:temp sarah$ mkdir 1/a
+Sarahs-MacBook-Air:temp sarah$ pdw
+-bash: pdw: command not found
+Sarahs-MacBook-Air:temp sarah$ pwd
+/Users/sarah/temp
+Sarahs-MacBook-Air:temp sarah$ mkdir 1/a/b
+Sarahs-MacBook-Air:temp sarah$ mkdir -p 1/a/b/c/d/e/f/g/h/i/j/k
+Sarahs-MacBook-Air:temp sarah$ 
+
+And now removing them all …
+
+Sarahs-MacBook-Air:a sarah$ cd b
+Sarahs-MacBook-Air:b sarah$ cd c
+Sarahs-MacBook-Air:c sarah$ cd d/e/f
+Sarahs-MacBook-Air:f sarah$ cd g/h/i/j
+Sarahs-MacBook-Air:j sarah$ rmdir k
+Sarahs-MacBook-Air:j sarah$ cd i
+-bash: cd: i: No such file or directory
+Sarahs-MacBook-Air:j sarah$ pwd
+/Users/sarah/temp/1/a/b/c/d/e/f/g/h/i/j
+Sarahs-MacBook-Air:j sarah$ cd ..
+Sarahs-MacBook-Air:i sarah$ pwd
+/Users/sarah/temp/1/a/b/c/d/e/f/g/h/i
+Sarahs-MacBook-Air:i sarah$ rmdir j
+Sarahs-MacBook-Air:i sarah$ cd ..
+Sarahs-MacBook-Air:h sarah$ rmdir i
+rmdir: i: Directory not empty
+Sarahs-MacBook-Air:h sarah$ rm .DS_Store
+Sarahs-MacBook-Air:h sarah$ rmdir i
+rmdir: i: Directory not empty
+Sarahs-MacBook-Air:h sarah$ pwd
+/Users/sarah/temp/1/a/b/c/d/e/f/g/h
+Sarahs-MacBook-Air:h sarah$ rmdir i
+rmdir: i: Directory not empty
+Sarahs-MacBook-Air:h sarah$ rm .DS_store
+rm: .DS_store: No such file or directory
+Sarahs-MacBook-Air:h sarah$ rmdir i
+rmdir: i: Directory not empty
+Sarahs-MacBook-Air:h sarah$ cd i
+Sarahs-MacBook-Air:i sarah$ ls -la
+total 16
+drwxr-xr-x  3 sarah  staff    96 Jan 29 22:39 .
+drwxr-xr-x  3 sarah  staff    96 Jan 29 22:40 ..
+-rw-r--r--@ 1 sarah  staff  6148 Jan 29 22:39 .DS_Store
+Sarahs-MacBook-Air:i sarah$ cd ..
+Sarahs-MacBook-Air:h sarah$ rm .DS_Store
+rm: .DS_Store: No such file or directory
+Sarahs-MacBook-Air:h sarah$ ls
+i
+Sarahs-MacBook-Air:h sarah$ cd ..
+Sarahs-MacBook-Air:g sarah$ ls
+h
+Sarahs-MacBook-Air:g sarah$ pwd
+/Users/sarah/temp/1/a/b/c/d/e/f/g
+Sarahs-MacBook-Air:g sarah$ cd h
+Sarahs-MacBook-Air:h sarah$ cd i
+Sarahs-MacBook-Air:i sarah$ rm .DS_Store
+Sarahs-MacBook-Air:i sarah$ cd ..
+Sarahs-MacBook-Air:h sarah$ rmdir i
+Sarahs-MacBook-Air:h sarah$ cd ..
+Sarahs-MacBook-Air:g sarah$ rmdir h
+Sarahs-MacBook-Air:g sarah$ cd ..
+Sarahs-MacBook-Air:f sarah$ rmdir g
+rmdir: g: Directory not empty
+Sarahs-MacBook-Air:f sarah$ cd g
+Sarahs-MacBook-Air:g sarah$ rm .DS_Store
+Sarahs-MacBook-Air:g sarah$ cd ..
+Sarahs-MacBook-Air:f sarah$ rmdir g
+Sarahs-MacBook-Air:f sarah$ pwd
+/Users/sarah/temp/1/a/b/c/d/e/f
+Sarahs-MacBook-Air:f sarah$ cd ..
+Sarahs-MacBook-Air:e sarah$ rmdir f
+rmdir: f: Directory not empty
+Sarahs-MacBook-Air:e sarah$ cd f
+Sarahs-MacBook-Air:f sarah$ rm .DS_Store
+Sarahs-MacBook-Air:f sarah$ cd ..
+Sarahs-MacBook-Air:e sarah$ rm .DS_Store
+Sarahs-MacBook-Air:e sarah$ rmdir e
+rmdir: e: No such file or directory
+Sarahs-MacBook-Air:e sarah$ cd ..
+Sarahs-MacBook-Air:d sarah$ rmdir e
+rmdir: e: Directory not empty
+Sarahs-MacBook-Air:d sarah$ cd e
+Sarahs-MacBook-Air:e sarah$ rm .DS_Store
+rm: .DS_Store: No such file or directory
+Sarahs-MacBook-Air:e sarah$ rm .DS_store
+rm: .DS_store: No such file or directory
+Sarahs-MacBook-Air:e sarah$ pwd
+/Users/sarah/temp/1/a/b/c/d/e
+Sarahs-MacBook-Air:e sarah$ ls
+f
+Sarahs-MacBook-Air:e sarah$ rmdir f
+Sarahs-MacBook-Air:e sarah$ cd ..
+Sarahs-MacBook-Air:d sarah$ rmdir e
+Sarahs-MacBook-Air:d sarah$ cd ..
+Sarahs-MacBook-Air:c sarah$ rmdir d
+rmdir: d: Directory not empty
+Sarahs-MacBook-Air:c sarah$ cd d
+Sarahs-MacBook-Air:d sarah$ rm .DS_Store
+Sarahs-MacBook-Air:d sarah$ cd ..
+Sarahs-MacBook-Air:c sarah$ rmdir d
+Sarahs-MacBook-Air:c sarah$ cd ..
+Sarahs-MacBook-Air:b sarah$ rmdir c
+rmdir: c: Directory not empty
+Sarahs-MacBook-Air:b sarah$ cd c
+Sarahs-MacBook-Air:c sarah$ rm .DS_Store
+Sarahs-MacBook-Air:c sarah$ cd ..
+Sarahs-MacBook-Air:b sarah$ rmdir c
+Sarahs-MacBook-Air:b sarah$ cd ..
+Sarahs-MacBook-Air:a sarah$ rmdir b
+rmdir: b: Directory not empty
+Sarahs-MacBook-Air:a sarah$ cd b
+Sarahs-MacBook-Air:b sarah$ rm .DS_Store
+Sarahs-MacBook-Air:b sarah$ cd ..
+Sarahs-MacBook-Air:a sarah$ rmdir b
+Sarahs-MacBook-Air:a sarah$ cd ..
+Sarahs-MacBook-Air:1 sarah$ rmdir a
+rmdir: a: Directory not empty
+Sarahs-MacBook-Air:1 sarah$ cd a
+Sarahs-MacBook-Air:a sarah$ rm -DS_Store
+rm: illegal option -- D
+usage: rm [-f | -i] [-dPRrvW] file ...
+       unlink file
+Sarahs-MacBook-Air:a sarah$ rm .DS_Store
+Sarahs-MacBook-Air:a sarah$ cd ..
+Sarahs-MacBook-Air:1 sarah$ rmdir a
+Sarahs-MacBook-Air:1 sarah$ ls
+Sarahs-MacBook-Air:1 sarah$ pwd
+/Users/sarah/temp/1
+Sarahs-MacBook-Air:1 sarah$ 
