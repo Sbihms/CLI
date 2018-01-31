@@ -1,0 +1,77 @@
+Now, here are the commands used to navigate through directories. Cd "directory name" to move forward to a directory. "cd .." moves you backwards to a previous directory. Cd ../../../ moves you backwards three times.
+
+Sarahs-MacBook-Air:~ sarah$ pwd
+/Users/sarah
+Sarahs-MacBook-Air:~ sarah$ cd ~
+Sarahs-MacBook-Air:~ sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ pwd
+/Users/sarah/temp
+Sarahs-MacBook-Air:temp sarah$ cd stuff
+Sarahs-MacBook-Air:stuff sarah$ pwd
+/Users/sarah/temp/stuff
+Sarahs-MacBook-Air:stuff sarah$ cd things
+Sarahs-MacBook-Air:things sarah$ pwd
+/Users/sarah/temp/stuff/things
+Sarahs-MacBook-Air:things sarah$ cd frank/
+-bash: cd: frank/: No such file or directory
+Sarahs-MacBook-Air:things sarah$ cd sarah/
+Sarahs-MacBook-Air:sarah sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah
+Sarahs-MacBook-Air:sarah sarah$ cd/joe
+-bash: cd/joe: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ cd joe/
+-bash: cd: joe/: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ cd "Sarah Stuff"
+-bash: cd: Sarah Stuff: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ cd Sarah Stuff
+-bash: cd: Sarah: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ ..
+-bash: ..: command not found
+Sarahs-MacBook-Air:sarah sarah$ ../
+-bash: ../: is a directory
+Sarahs-MacBook-Air:sarah sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah
+Sarahs-MacBook-Air:sarah sarah$ cd temp
+-bash: cd: temp: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ ..
+-bash: ..: command not found
+Sarahs-MacBook-Air:sarah sarah$ ../
+-bash: ../: is a directory
+Sarahs-MacBook-Air:sarah sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah
+Sarahs-MacBook-Air:sarah sarah$ cd things/
+-bash: cd: things/: No such file or directory
+Sarahs-MacBook-Air:sarah sarah$ ../../
+-bash: ../../: is a directory
+Sarahs-MacBook-Air:sarah sarah$ pwd
+/Users/sarah/temp/stuff/things/sarah
+Sarahs-MacBook-Air:sarah sarah$ ..
+-bash: ..: command not found
+Sarahs-MacBook-Air:sarah sarah$ ..
+-bash: ..: command not found
+Sarahs-MacBook-Air:sarah sarah$ cd ..
+Sarahs-MacBook-Air:things sarah$ pwd
+/Users/sarah/temp/stuff/things
+Sarahs-MacBook-Air:things sarah$ cd ..
+Sarahs-MacBook-Air:stuff sarah$ cd ..
+Sarahs-MacBook-Air:temp sarah$ cd ..
+Sarahs-MacBook-Air:~ sarah$ cd ..
+Sarahs-MacBook-Air:Users sarah$ cd ../../../
+Sarahs-MacBook-Air:/ sarah$ pwd
+/
+Sarahs-MacBook-Air:/ sarah$ cd temp
+-bash: cd: temp: No such file or directory
+Sarahs-MacBook-Air:/ sarah$ pwd
+/
+Sarahs-MacBook-Air:/ sarah$ cd users
+Sarahs-MacBook-Air:users sarah$ cd sarah
+Sarahs-MacBook-Air:sarah sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ cd ../../
+Sarahs-MacBook-Air:users sarah$ cd sarah
+Sarahs-MacBook-Air:sarah sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ cd stuff
+Sarahs-MacBook-Air:stuff sarah$ cd things
+Sarahs-MacBook-Air:things sarah$ cd ../../../
+Sarahs-MacBook-Air:sarah sarah$ 
+
+
