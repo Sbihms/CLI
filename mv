@@ -1,0 +1,27 @@
+Move a file, or  rename it. 
+
+Example of renaming file:
+
+Sarahs-MacBook-Air:~ sarah$ cd temp
+Sarahs-MacBook-Air:temp sarah$ ls
+awesome.txt neat.txt nials
+iamcool.txt newplace something
+Sarahs-MacBook-Air:temp sarah$ mv awesome.txt uncool.txt
+Sarahs-MacBook-Air:temp sarah$ ls
+iamcool.txt newplace something
+neat.txt nials uncool.txt
+Sarahs-MacBook-Air:temp sarah$ mv newplace oldplace
+Sarahs-MacBook-Air:temp sarah$ ls
+iamcool.txt nials something
+neat.txt oldplace uncool.txt
+
+
+Example showing moving file:
+
+Sarahs-MacBook-Air:temp sarah$ mv newplace/something temp
+Sarahs-MacBook-Air:temp sarah$ ls
+iamcool.txt newplace something uncool.txt
+neat.txt nials temp
+Sarahs-MacBook-Air:temp sarah$ mv something newplace
+Sarahs-MacBook-Air:temp sarah$ 
+
