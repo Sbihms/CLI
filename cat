@@ -1,0 +1,27 @@
+Creating a streaming a file:
+
+Sarahs-MacBook-Air:temp sarah$ touch test2.txt
+Sarahs-MacBook-Air:temp sarah$ ls
+boss iamcool.txt nials test.txt uncool.txt
+emma newplace temp test2.txt
+Sarahs-MacBook-Air:temp sarah$ less test2.txt
+Sarahs-MacBook-Air:temp sarah$ cat test2.txt
+Sarahs-MacBook-Air:temp sarah$ open test2.txt
+Sarahs-MacBook-Air:temp sarah$ cat test2.txt
+I am a poet
+Who did not know it
+I like to drink water
+And I am a daughter!
+
+Creating and streaming a few different files at once
+
+Sarahs-MacBook-Air:temp sarah$ touch cat.txt dog.txt frog.txt
+Sarahs-MacBook-Air:temp sarah$ cat cat.txt dog.txt frog.txt
+A 
+Cat
+Says
+meowA dog barks
+And licks his butt...
+Ew.Frogs
+Ribbit!Sarahs-MacBook-Air:temp sarah$ 
+
