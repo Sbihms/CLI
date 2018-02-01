@@ -1,0 +1,30 @@
+
+
+Removing a single file and then multiple files
+
+Sarahs-MacBook-Air:temp sarah$ ls
+boss emma newplace test.txt
+cat.txt frog.txt nials test2.txt
+dog.txt iamcool.txt temp uncool.txt
+Sarahs-MacBook-Air:temp sarah$ rm uncool.txt
+Sarahs-MacBook-Air:temp sarah$ ls
+boss emma newplace test.txt
+cat.txt frog.txt nials test2.txt
+dog.txt iamcool.txt temp
+Sarahs-MacBook-Air:temp sarah$ rm boss emma iamcool.txt
+Sarahs-MacBook-Air:temp sarah$ ls
+cat.txt frog.txt nials test.txt
+dog.txt newplace temp test2.txt
+
+
+Removing a file within a directory and then removing the directory.
+
+Sarahs-MacBook-Air:temp sarah$ rm newplace/emma
+Sarahs-MacBook-Air:temp sarah$ rm -rf newplace
+Sarahs-MacBook-Air:temp sarah$ ls
+cat.txt frog.txt something test.txt
+dog.txt nials temp test2.txt
+Sarahs-MacBook-Air:temp sarah$ 
+
+
+Usign the command "rm -rf" not only deletes a file but also deletes everything inside of it. BE CAREFUL when using this command!
